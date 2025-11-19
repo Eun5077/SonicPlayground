@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SonicPlayground</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Tool Selection -->
+  <header class="toolbar">
+    <button class="tool-btn active" data-tool="polygon" title="Polygon">
+      <svg width="22" height="22" viewBox="0 0 24 24"><path d="M5 3l14 0l0 14l-14 0z" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+    </button>
+    <button class="tool-btn" data-tool="ball" title="Ball">
+      <svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+    </button>
+    <button class="tool-btn" data-tool="brush" title="Brush">
+      <img src="cursors/brush.png" alt="Brush"  />
+    </button>
+    <button class="tool-btn" data-tool="arrow" title="Arrow">
+      <svg width="22" height="22" viewBox="0 0 24 24" style="transform:rotate(-90deg)"><path d="M4 12h12" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 6l6 6l-6 6" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+    </button>
+    <button class="tool-btn" data-tool="shape" title="Shape">
+      <img src="cursors/shape.svg" alt="Shape" />
+    </button>
+    <button class="tool-btn" data-tool="eraser" title="Eraser">
+      <img src="cursors/eraser.png" alt="Eraser"  />
+    </button>
+  </header>
+
+  <!-- Ball Envelope controls -->
+  <div id="ball-envelope-panel" style="display:none; padding:8px; border-top:1px solid #ccc; font-size:12px;">
+    <div style="margin-bottom:4px;">
+      <strong>Ball Envelope - <span id="ballEnvelopeCurrent">Type 1</span></strong>
+    </div>
+    <label style="display:block;">
+      Attack
+      <input id="ballAttack" type="range" min="0" max="2" step="0.01" value="0.001">
+    </label>
+    <label style="display:block;">
+      Decay
+      <input id="ballDecay" type="range" min="0" max="2" step="0.01" value="0.12">
+    </label>
+    <label style="display:block;">
+      Sustain
+      <input id="ballSustain" type="range" min="0" max="1" step="0.01" value="0.0">
+    </label>
+    <label style="display:block;">
+      Release
+      <input id="ballRelease" type="range" min="0" max="3" step="0.01" value="0.15">
+    </label>
+  </div>
+
+  <!-- Ball Type Selection -->
+  <div id="ballOptions" class="shape-options" style="display:none;">
+    <button class="shape-option ball-option active" data-ball="type1">
+      <span class="ball-dot"></span> Type 1
+    </button>
+    <button class="shape-option ball-option" data-ball="type2">
+      <span class="ball-dot"></span> Type 2
+    </button>
+    <button class="shape-option ball-option" data-ball="type3">
+      <span class="ball-dot"></span> Type 3
+    </button>
+  </div>
+
+  <!-- Shape Options -->
+  <div id="shapeOptions" class="shape-options" style="display:none;">
+    <button class="shape-option active" data-shape="circle">● Circle</button>
+    <button class="shape-option" data-shape="triangle">▲ Triangle</button>
+    <button class="shape-option" data-shape="square">■ Square</button>
+  </div>
+
+  <!-- Main: Title, Canvas -->
+  <main>
+    <h1>SonicPlayground</h1>
+    <p id="toolDescription" class="tool-description"></p>
+    <canvas id="SonicPlayground" width="1400" height="800"></canvas>
+  </main>
+
+  <!-- Tone.js -->
+  <script src="https://cdn.jsdelivr.net/npm/tone@14.7.77/build/Tone.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
