@@ -62,6 +62,7 @@ let arrowPitchSemitone = 0;
 // Audio Setup
 // =========================
 const synth = new Tone.PolySynth(Tone.Synth).toDestination();
+synth.volume.value = -12; 
 
 synth.set({
   oscillator: { type: "sine" },
