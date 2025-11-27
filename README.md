@@ -7,6 +7,7 @@
 
 ## 1.	SonicPlayground
 This project connects the relationship between action, vision, and sound through the integrated mediums of drawing and music. Whereas traditional notation presents a pre-composed structure that performers reinterpret, SonicPlayground explores a system in which the act of drawing itself becomes the act of composing. When the user creates shapes or traces lines on the screen, these physical gestures are directly transformed into musical parameters such as pitch, rhythm, and timbre.
+
 The sounds generated within SonicPlayground are not random; they follow defined musical rules within a rule-based compositional framework. Each mode corresponds to its own musical logic, mapping the principles of melody, rhythm, and phrasing from traditional notation onto visual structures. Through this system, the user experiences the process of “drawing music,” gaining the ability to create and reshape sound intuitively. SonicPlayground thus offers a new form of musical interaction in which anyone can actively participate in shaping the sonic outcome.
 
 ## 2.	System Overview and Functional Details
