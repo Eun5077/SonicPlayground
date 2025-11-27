@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SonicPlayground</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="toolbar">
+    <button class="tool-btn active" data-tool="polygon" title="Polygon">
+      <svg width="22" height="22" viewBox="0 0 24 24"><path d="M5 3l14 0l0 14l-14 0z" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+    </button>
+    <button class="tool-btn" data-tool="ball" title="Ball">
+      <svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+    </button>
+    <button class="tool-btn" data-tool="brush" title="Brush">
+      <img src="cursors/brush.png" alt="Brush"  />
+    </button>
+    <button class="tool-btn" data-tool="arrow" title="Arrow">
+      <svg width="22" height="22" viewBox="0 0 24 24" style="transform:rotate(-90deg)"><path d="M4 12h12" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 6l6 6l-6 6" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+    </button>
+    <button class="tool-btn" data-tool="shape" title="Shape">
+      <img src="cursors/shape.svg" alt="Shape" />
+    </button>
+    <button class="tool-btn" data-tool="eraser" title="Eraser">
+      <img src="cursors/eraser.png" alt="Eraser"  />
+    </button>
+  </header>
+
+  <div id="ballOptions" class="shape-options">
+    <button class="shape-option ball-option active" data-ball="type1">
+      <span class="ball-dot"></span> Type 1
+    </button>
+    <button class="shape-option ball-option" data-ball="type2">
+      <span class="ball-dot"></span> Type 2
+    </button>
+    <button class="shape-option ball-option" data-ball="type3">
+      <span class="ball-dot"></span> Type 3
+    </button>
+  </div>
+
+  <div id="shapeOptions" class="shape-options">
+    <button class="shape-option active" data-shape="circle">● Circle</button>
+    <button class="shape-option" data-shape="triangle">▲ Triangle</button>
+    <button class="shape-option" data-shape="square">■ Square</button>
+  </div>
+
+  <main>
+    <h1>SonicPlayground</h1>
+    <p id="toolDescription" class="tool-description"></p>
+
+    <div class="playground-layout">
+      <canvas id="SonicPlayground" width="1400" height="800"></canvas>
+      <aside id="reverb-panel" class="fx-panel">
+        <h2 class="fx-title">Reverb</h2>
+
+        <div class="fx-slider">
+          <label for="reverbDecay">Decay</label>
+          <input
+            id="reverbDecay"
+            type="range"
+            min="0.5"
+            max="10"
+            step="0.1"
+          />
+        </div>
+
+        <div class="fx-slider">
+          <label for="reverbPreDelay">Pre Delay</label>
+          <input
+            id="reverbPreDelay"
+            type="range"
+            min="0"
+            max="0.2"
+            step="0.005"
+          />
+        </div>
+
+        <div class="fx-slider">
+          <label for="reverbWet">Wet</label>
+          <input
+            id="reverbWet"
+            type="range"
+            min="0"
+            max="1"
+            step="0.01"
+          />
+        </div>
+
+        <section id="ball-envelopes" class="fx-section">
+
+          <h2 class="fx-subtitle">Ball Envelopes</h2>
+
+          <div class="ball-env-block" data-type="type1">
+            <div class="ball-env-title">Type 1</div>
+            <label>Attack <input id="ballAttack_type1" type="range" min="0" max="2" step="0.01"></label>
+            <label>Decay  <input id="ballDecay_type1"  type="range" min="0" max="2" step="0.01"></label>
+            <label>Sustain<input id="ballSustain_type1"type="range" min="0" max="1" step="0.01"></label>
+            <label>Release<input id="ballRelease_type1"type="range" min="0" max="3" step="0.01"></label>
+          </div>
+
+          <div class="ball-env-block" data-type="type2">
+            <div class="ball-env-title">Type 2</div>
+            <label>Attack <input id="ballAttack_type2" type="range" min="0" max="2" step="0.01"></label>
+            <label>Decay  <input id="ballDecay_type2"  type="range" min="0" max="2" step="0.01"></label>
+            <label>Sustain<input id="ballSustain_type2"type="range" min="0" max="1" step="0.01"></label>
+            <label>Release<input id="ballRelease_type2"type="range" min="0" max="3" step="0.01"></label>
+          </div>
+
+          <div class="ball-env-block" data-type="type3">
+            <div class="ball-env-title">Type 3</div>
+            <label>Attack <input id="ballAttack_type3" type="range" min="0" max="2" step="0.01"></label>
+            <label>Decay  <input id="ballDecay_type3"  type="range" min="0" max="2" step="0.01"></label>
+            <label>Sustain<input id="ballSustain_type3"type="range" min="0" max="1" step="0.01"></label>
+            <label>Release<input id="ballRelease_type3"type="range" min="0" max="3" step="0.01"></label>
+          </div>
+
+        </section>
+      </aside>
+
+
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/tone@14.7.77/build/Tone.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
