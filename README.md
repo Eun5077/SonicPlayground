@@ -1,7 +1,7 @@
 # SonicPlayground
 ## 0. Webpage, GitHub, Demonstration Video Links
     • SonicPlayground Webpage: https://eun5077.github.io/SonicPlayground/
-    • GitHub Repository: 
+    • GitHub Repository: https://github.com/Eun5077/SonicPlayground.git
     • Demonstration Video: https://youtu.be/3JudBmLbCNg
     • Demonstration Score: 
 
