@@ -1,12 +1,12 @@
 # SonicPlayground
 ## 0. Webpage, GitHub, Demonstration Video Links
-[Go to SonicPlayground Webpage] (https://eun5077.github.io/SonicPlayground/)
+[Go to SonicPlayground Webpage](https://eun5077.github.io/SonicPlayground/)
 
-[Go to GitHub Repository] (https://github.com/Eun5077/SonicPlayground.git)
+[Go to GitHub Repository](https://github.com/Eun5077/SonicPlayground.git)
 
-[Go to Demonstration Video] (https://youtu.be/3JudBmLbCNg)
+[Go to Demonstration Video](https://youtu.be/3JudBmLbCNg)
 
-[Go to Demonstration Score] (https://drive.google.com/file/d/11kltLEjc6w07fcHzxlbV7fIk8nhe2zxQ/view?usp=sharing)
+[Go to Demonstration Score](https://drive.google.com/file/d/11kltLEjc6w07fcHzxlbV7fIk8nhe2zxQ/view?usp=sharing)
 
 ## 1.	SonicPlayground
 This project connects the relationship between action, vision, and sound through the integrated mediums of drawing and music. Whereas traditional notation presents a pre-composed structure that performers reinterpret, SonicPlayground explores a system in which the act of drawing itself becomes the act of composing. When the user creates shapes or traces lines on the screen, these physical gestures are directly transformed into musical parameters such as pitch, rhythm, and timbre.
